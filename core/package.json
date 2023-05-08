@@ -1,0 +1,33 @@
+{
+  "name": "@sooniter/pnpm-duplicate-view",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib",
+    "!*.map"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "test": "pnpm run compile",
+    "prepublishOnly": "pnpm run compile",
+    "compile": "tsc --build",
+    "lint": "eslint \"src/**/*.ts\""
+  },
+  "keywords": [
+    "pnpm8"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sooniter/pnpm-duplicate-view"
+  },
+  "homepage": "https://github.com/sooniter/pnpm-duplicate-view",
+  "dependencies": {
+    "@pnpm/lockfile-file": "^8.0.2",
+    "@pnpm/reviewing.dependencies-hierarchy": "^2.0.4"
+  }
+}

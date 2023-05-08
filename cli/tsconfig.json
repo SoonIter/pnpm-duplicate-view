@@ -1,0 +1,11 @@
+{
+  "extends": "@pnpm/tsconfig",
+  "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+    "outDir": "lib",
+    "rootDir": "src"
+  },
+  "include": ["src/**/*.ts", "../../__typings__/**/*.d.ts"],
+  "references": [{ "path": "../core" }],
+  "composite": true
+}

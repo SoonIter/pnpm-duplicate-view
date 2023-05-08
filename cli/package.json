@@ -1,0 +1,28 @@
+{
+  "name": "@sooniter/pnpm-duplicate-cli",
+  "version": "0.0.0",
+  "description": "",
+  "bin": "lib/index.js",
+  "files": [
+    "lib",
+    "!*.map"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "test": "pnpm run compile",
+    "prepublishOnly": "pnpm run compile",
+    "compile": "tsc --build",
+    "lint": "eslint \"src/**/*.ts\""
+  },
+  "keywords": [
+    "pnpm8"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sooniter/pnpm-duplicate-view"
+  },
+  "homepage": "https://github.com/sooniter/pnpm-duplicate-view",
+  "dependencies": {
+    "@sooniter/pnpm-duplicate-view": "workspace:*"
+  }
+}
