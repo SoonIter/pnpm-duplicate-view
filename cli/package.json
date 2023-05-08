@@ -1,13 +1,15 @@
 {
-  "name": "@sooniter/pnpm-duplicate-cli",
+  "name": "@nrr/pnpm-duplicate-cli",
   "version": "0.0.1",
   "description": "",
+  "author": "sooniter <sooniter@gmail.com>",
   "bin": {
     "dup": "bin/index.js"
   },
   "main": "lib/index.js",
   "files": [
     "lib",
+    "CHANGELOG.md",
     "!*.map"
   ],
   "scripts": {
@@ -26,7 +28,7 @@
   },
   "homepage": "https://github.com/sooniter/pnpm-duplicate-view",
   "dependencies": {
-    "@sooniter/pnpm-duplicate-view": "workspace:*",
+    "@nrr/pnpm-duplicate-view": "workspace:*",
     "picocolors": "^1.0.0"
   }
 }

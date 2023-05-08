@@ -1,15 +1,17 @@
 {
-  "name": "@sooniter/pnpm-duplicate-view",
-  "version": "0.0.0",
+  "name": "@nrr/pnpm-duplicate-view",
+  "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "author": "sooniter <sooniter@gmail.com>",
   "exports": {
     ".": "./lib/index.js"
   },
   "files": [
     "lib",
-    "!*.map"
+    "!*.map",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "dev": "tsc --watch",

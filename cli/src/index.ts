@@ -1,4 +1,4 @@
-import { duplicateView } from '@sooniter/pnpm-duplicate-view';
+import { duplicateView } from '@nrr/pnpm-duplicate-view';
 import { cyan } from 'picocolors';
 
 async function main() {

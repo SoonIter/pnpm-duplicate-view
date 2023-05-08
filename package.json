@@ -2,11 +2,13 @@
   "name": "monorepo-root",
   "private": true,
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "changeset": "changeset"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.0",
     "@commitlint/cli": "^17.6.3",
+    "@changesets/cli": "^2.26.0",
     "@commitlint/config-conventional": "^17.6.3",
     "@commitlint/prompt-cli": "^17.6.3",
     "@pnpm/eslint-config": "^1.0.1",
