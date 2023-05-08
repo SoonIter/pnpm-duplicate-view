@@ -8,7 +8,6 @@ function walker(x: PackageNode) {
     return;
   }
   for (const dep of x.dependencies) {
-    walker(dep);
     if (!m[dep.name]) {
       m[dep.name] = {};
     }
@@ -18,6 +17,7 @@ function walker(x: PackageNode) {
     else {
       m[dep.name][dep.version] += 1;
     }
+    walker(dep);
   }
 }
 

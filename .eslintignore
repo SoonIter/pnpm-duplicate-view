@@ -1,2 +1,5 @@
 fixtures
 __fixtures__
+lib
+dist
+tsconfig.tsbuildinfo
