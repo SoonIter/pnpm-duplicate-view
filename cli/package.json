@@ -1,6 +1,6 @@
 {
   "name": "@nrr/pnpm-duplicate-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "author": "sooniter <sooniter@gmail.com>",
   "bin": {
