@@ -4,8 +4,10 @@ import { cyan } from 'picocolors';
 async function main() {
   const args = process.argv.slice(2);
   const pkgs = args.filter(i => !i.startsWith('-'));
+  const devDeps = args.includes('--dev');
+  const deps = true;
 
-  const m = await duplicateView(pkgs);
+  const m = await duplicateView(pkgs, { deps, devDeps });
 
   const duplicateDeps: [string, string[]][] = Object.entries(m)
     .map(([depName, depObj]) => {

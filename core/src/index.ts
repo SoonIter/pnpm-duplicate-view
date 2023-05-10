@@ -21,11 +21,23 @@ function walker(x: PackageNode) {
   }
 }
 
-export async function duplicateView(pkgs: string[]) {
+interface Options {
+  devDeps: boolean
+  deps: boolean
+}
+export async function duplicateView(pkgs: string[], options: Options) {
+  const { devDeps, deps } = options ?? {};
   const x = await buildDependenciesHierarchy(pkgs, {
-    depth: 1000,
+    depth: 50000,
     lockfileDir: process.cwd(),
   });
-  pkgs.forEach(pkgA => x[pkgA].dependencies?.forEach(node => walker(node)));
+  if (deps) {
+    pkgs.forEach(pkg => x[pkg].dependencies?.forEach(node => walker(node)));
+  }
+  if (devDeps) {
+    pkgs.forEach(pkg =>
+      x[pkg].devDependencies?.forEach(node => walker(node)),
+    );
+  }
   return m;
 }
